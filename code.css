@@ -78,6 +78,9 @@ nav a:active span {
 	left: 0;
 	height: 18px;
 }
+wbr {
+	display: none;
+}
 li {
 	width: 100%;
 	line-height: 18px;
@@ -247,5 +250,8 @@ ol:first-child {
 	.line {
 		width: calc(95vw - 110px);
 		height: auto;
+	}
+	wbr {
+		display: block;
 	}
 }
