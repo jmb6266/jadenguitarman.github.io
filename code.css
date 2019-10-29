@@ -17,10 +17,13 @@ body {
 	height: 3vh;
 	width: 100%;
 }
-nav {
+#nav_desktop {
 	float: right;
 	width: 60%;
 	height: 100%;
+}
+#nav_mobile {
+	display: none;
 }
 nav a {
 	width: 25%;
@@ -30,9 +33,14 @@ nav a {
 	text-align: center;
 	border-bottom: 1px solid #111;
 	text-decoration: none;
-	font-size: 2.5vh;
 	font-family: monospace;
 	box-shadow: #222 2px 2px 2px;
+}
+#nav_desktop a {
+	font-size: 2.5vh;
+}
+#nav_mobile a {
+	font-size: 3vh;
 }
 nav span {
 	color: #999;
@@ -56,27 +64,22 @@ nav a:active span {
 	width: 0.5em;
 }
 .terminalScreen {
-	font-size: 11px;
+	font-size: 16px;
 	width: 100%;
 	height: 85vh;
 }
-p {
-	margin: 0 50px;
+.line {
+	margin: 0 60px;
 	overflow: hidden;
 	position: relative;
 	width: 0;
-	height: 12px;
 	top: 0;
 	left: 0;
+	word-break: break-word;
 }
 li {
-	overflow: hidden;
 	width: 100%;
-	line-height: 12px;
-}
-span {
-	color: #fff;
-	font-weight: normal;
+	line-height: 18px;
 }
 ol {
 	color: #4b5364;
@@ -85,7 +88,6 @@ ol {
 	margin: 10px 0 10px 0;
 }
 ol li::before {
-	margin-right: 1.5em;
 	padding-left: 0px;
 	text-align: right;
 }
@@ -212,22 +214,42 @@ ol:first-child {
 }
 @-webkit-keyframes type {
 	to {
-		width: 100%;
+		width: calc(95vw - 110px);
 	}
 }
 @-moz-keyframes type {
 	to {
-		width: 100%;
+		width: calc(95vw - 110px);
 	}
 }
 @-o-keyframes type {
 	to {
-		width: 100%;
+		width: calc(95vw - 110px);
 	}
 }
 @keyframes type {
 	to {
-		width: 100%;
+		width: calc(95vw - 110px);
 	}
 }
- 
+
+@media (max-width:600px) {
+	#nav_desktop {
+		display: none !important;
+	}
+	#nav_mobile {
+		display: block;
+		height: 5vh;
+		position: absolute;
+		width: 100vw;
+		top: 0;
+		left: 0;
+	}
+	.window-wrapper {
+		height: 86vh;
+		margin-top: 4vh;
+	}
+	#terminalOL {
+		padding-left: 0;
+	}
+}

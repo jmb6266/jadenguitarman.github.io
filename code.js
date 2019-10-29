@@ -17,14 +17,14 @@ function animate () {
 				element.innerText = element.innerText.slice(1);
 			});
 			if (element.innerText[0]==" ") {
-				total[ti].push("<span>&nbsp;</span>");
+				total[ti].push("<span>&nbsp;</span><wbr>");
 				element.innerText = element.innerText.slice(1);
 			}
 			total[ti] = total[ti].join("");
 		});
 		total = total.join("");
 		i++;
-		document.getElementById("terminalOL").innerHTML += '<li class="number'+i+'"><p class="line'+i+'">'+total+'<span class="cursor'+i+'">_</span></p></li>';
+		document.getElementById("terminalOL").innerHTML += '<li class="number'+i+'"><div class="line line'+i+'">'+total+'<span class="cursor'+i+'">_</span></p></li>';
 		element.parentNode.removeChild(element);
 		style_params.push([i, i*0.5, (i*0.5)+0.25, (i*0.5)+0.5]);
 	});
