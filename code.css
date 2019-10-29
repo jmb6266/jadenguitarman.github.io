@@ -75,7 +75,7 @@ nav a:active span {
 	width: 0;
 	top: 0;
 	left: 0;
-	word-break: break-word;
+	height: 18px;
 }
 li {
 	width: 100%;
@@ -130,20 +130,7 @@ ol:first-child {
 .green {
 	color: #50fa7b;
 }
-/*
-.cursor1 {
-	-webkit-animation: blink 0.75s 1s 1 forwards;
-	-moz-animation: blink 0.75s 1s 1 forwards;
-	-o-animation: blink 0.75s 1s 1 forwards;
-	animation: blink 0.75s 1s 1 forwards;
-}
-.cursor28 {
-	-webkit-animation: blink 1s 17.5s 2 forwards;
-	-moz-animation: blink 1s 17.5s 2 forwards;
-	-o-animation: blink 1s 17.5s 2 forwards;
-	animation: blink 1s 17.5s infinite forwards;
-}
-*/
+
 @-webkit-keyframes blink {
 	0% {
 		opacity: 0;
@@ -251,5 +238,12 @@ ol:first-child {
 	}
 	#terminalOL {
 		padding-left: 0;
+	}
+}
+
+@media (max-width:1000px) {
+	.line {
+		width: calc(95vw - 110px);
+		height: auto;
 	}
 }
