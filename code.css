@@ -81,6 +81,9 @@ nav a:active span {
 wbr {
 	display: none;
 }
+span[class^='cursor'], span[class*=' cursor']{
+	font-weight: bold;
+}
 li {
 	width: 100%;
 	line-height: 18px;
